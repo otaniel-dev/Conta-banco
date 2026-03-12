@@ -1,13 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public void main(String[] args) {
+    String nome = "";
+    String agencia = "";
+    int numeroConta = 0;
+    double saldo = 0;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Olá! Qual seria o seu nome?: ");
+    nome = scanner.next();
+
+    System.out.print("Por favor, digite o número desejado para ser sua agência: ");
+    agencia = scanner.next();
+
+    System.out.print("Agora o número da conta: ");
+    numeroConta = scanner.nextInt();
+
+    System.out.print("Agora informe o saldo da sua conta: ");
+    saldo = scanner.nextDouble();
+
+    System.out.println("Olá "+nome+", obrigado por criar uma conta em nosso banco, sua agência é "+agencia+", conta "+numeroConta+" e seu saldo de R$ "+saldo+" já está disponível!");
 }
